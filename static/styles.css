@@ -1,0 +1,29 @@
+h1 {margin-left: 100;
+color: black;font-size: 25px;font-family: Arial, sans-serif;}
+
+body {background-image: url('farm.jpg');
+margin-top: 80px;
+margin-bottom: 100px;
+margin-left: 400px;
+margin-right: 150px;}
+
+
+input {width: 70%;
+padding: 12px 20px;
+margin: 8px 0;
+box-sizing: border-box;
+border-bottom: 4px solid black;}
+
+button {background-color: #4CAF50;
+    margin: auto;
+    color: white;
+    padding: 15px 100px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin-left: 170px;}
+
+#prediction {margin-left: 100px;
+margin-top: 20px;
+color: #000;}
