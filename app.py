@@ -1,10 +1,11 @@
 import numpy as np
-from flask import Flask, request, jsonify,render_template
+from flask import Flask, request, render_template
 import pickle
 
-
+# Create Flask app
 app = Flask(__name__)
 
+# Load the trained model
 # model = pickle.load(open("cropmodel.pkl", "rb"))
 
 with open("cropmodel.pkl", "rb") as f:
@@ -12,6 +13,7 @@ with open("cropmodel.pkl", "rb") as f:
 
 print("✅ Model loaded successfully")
 
+# Define routes
 @app.route('/')
 def home():
     return render_template('index.html')
@@ -26,5 +28,6 @@ def predict():
     print("Predicted crop:", prediction)
     return render_template('index.html', prediction_text='Recommended Crop is: {}'.format(prediction))
 
+# Run the app
 if __name__ == "__main__":
     app.run(debug=True )
